@@ -1,0 +1,307 @@
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="css\cafestyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/cafejs.js"></script>
+    <style>
+        .tabs
+        {
+            margin: 20px;
+        }
+        .tabs li
+        {
+            list-style-type: none;
+            float: left;
+            padding: 10px 20px;
+            color: white;
+            background-color: black;
+            border: 1px solid black;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+        .tabs li:hover,.tabs .active
+        {
+            background-color: white;
+            color: black;
+        }
+        .container
+        {
+            text-align: center;
+            box-sizing: border-box;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+        img
+        {
+            height: 300px;
+            width: 400px;
+        }
+        h4
+        {
+            font-weight: bold;
+        }
+        .container .box
+        {
+            width: 31%;
+            height: 320px;
+            float: left;
+            margin: 13px;
+        }
+        
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                var value=$(this).attr("data-filter");
+                if(value=="all")
+                {
+                    $(".filter").show("1000");
+                }
+                else
+                {
+                    $(".filter").not("."+value).hide("1000");
+                    $(".filter").filter("."+value).show("1000");
+                } 
+                $("ul .btn").click(function(){
+                    $(this).addClass('active').siblings().removeClass('active');
+                })
+            })
+        })
+    </script>
+</head>    
+<body>
+    <header style="height: 85vh; background-image: url(images/2.jpg);">
+        <nav>
+            <div class="logo">
+                <a href="cafewebsite.html"><img src="images\logo%202.png"></a>
+            </div>    
+            <ul>
+                <li><a href="cafewebsite.html">Home</a></li>
+                <li class="active"><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="reservation.html">Book a table</a></li>    
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>Menu</h1>
+        </div>
+    </header>
+    
+<div class="container">
+    <ul class="tabs">
+        <li class="btn active" data-filter="all">All</li>
+        <li class="btn" data-filter="bev">Beverages</li>
+        <li class="btn " data-filter="food">Food</li>
+        <li class="btn" data-filter="des">Deserts</li>
+        <div style="clear: both;"></div>
+    </ul>
+    <div class="box filter food">
+        <img src="images/products/Afghani-Chicken-Biryani_2.jpg">
+        <h4>Afghani Chicken Biryani</h4>
+    </div>
+    <div class="box filter food">
+        <img src="images/products/Big-Crunch-Chicken-Classic-Burger.jpg">
+        <h4>Big-Crunch Chicken Classic Burger</h4>
+    </div>
+    <div class="box filter food">
+        <img src="images/products/Big-Crunch-Veg-Cheese-Burger_2.jpg">
+        <h4>Big Crunch Veg Cheese Burger</h4>
+    </div>
+    <div class="box filter food">
+        <img src="images/products/CrispyVeg_2.jpg">
+        <h4>CrispyVeg</h4>
+    </div>
+    <div class="box filter food">
+        <img src="images/products/Chilli-Cheese-Toastizza_2.jpg">
+        <h4>Chilli Cheese Toastizza</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Assam-Tea_0.jpg">
+        <h4>Assam Tea</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/836x663-strawberry_0.jpg">
+        <h4>Strawberry Shake</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Cafe-Mocha.jpg">
+        <h4>Cafe Mocha</h4>
+    </div>
+    <div class="box filter bev">
+       <img src="images/products/CafeLatte.jpg">
+        <h4>CafeLatte</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Cappuccino_3.jpg">
+        <h4>Cappuccino</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/chocolate_0.jpg">
+        <h4>Chocolate Shake</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Cold-Cocoa-Latte_0.jpg">
+        <h4>Cold Cocoa Latte</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Filter-Coffee.png">
+        <h4>Filter Coffee</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/mango_0.jpg">
+        <h4>Mango Shake</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Masala-Chai_0.jpg">
+        <h4>Masala Chai</h4>
+    </div>
+    <div class="box filter bev">
+        <img src="images/products/Vegan-Shake_0.jpg">
+        <h4>Vegan Shake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-black-forest-cake.jpg">
+        <h4>Black forest cake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-Black-Forest.jpg">
+        <h4>Black Forest</h4>  
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-Brownie.jpg">
+        <h4>Brownie</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-Chocolate-Icecream.jpg">
+        <h4>Chocolate Icecream</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-Coco-Cake.jpg">
+        <h4>Coco Cake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-Coco-Slice.jpg">
+        <h4>Coco Slice</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-dutch-truffle-cake.jpg">
+        <h4>Dutch truffle cake</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-Eclair.jpg">
+        <h4>Eclair</h4>
+    </div>
+    <div class="box filter des">
+        <img src="images/products/836x663-pineapple-cake.jpg">
+        <h4>Pineapple cake</h4>
+    </div>
+</div>   
+    <div class="navbar navbar-inverse" class="footer-wrapper">
+        <div class="container-fluid">
+            <div class="footer-mid-part">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-section-one">
+                            <div class="footer-heading"><h2>Caffaccino</h2></div>
+                        <div class="footer-contact-box">
+                            <div class="footer-contact-text">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            </div>
+                            <div class="footer-social-icons">
+                                <div class="menu">
+            <a class="mbtn" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a class="mbtn" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="mbtn" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a class="mbtn" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a class="mbtn" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-section-two">
+                            <div class="footer-heading"><h2>Open Hours</h2></div>
+                        <div class="footer-link">
+                            <table class="oht" cellspacing="10px">
+                                <tr>
+                                    <td class="ohtl">Monday</td>
+                                    <td>11:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="ohtl">Tuesday</td>
+                                    <td>11:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="ohtl">Wednesday</td>
+                                    <td>11:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="ohtl">Thurday</td>
+                                    <td>11:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="ohtl">Friday</td>
+                                    <td>11:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="ohtl">Saturday</td>
+                                    <td>11:00 - 18:00</td>
+                                </tr>
+                                <tr>
+                                    <td class="ohtl">Sunday</td>
+                                    <td>Closed</td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-section-two">
+                            <div class="footer-heading"><h2>Quick Links</h2></div>
+                                <div class="footer-link">
+                                    <ul>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms and Conditions</a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-section-three">
+                            <div class="footer-heading"><h2>Newsletter</h2></div>
+                            <div class="footer-form">
+                                <div class="footer-contact-text">
+                            <p>Far far away, behind the word mountains, far from the countries.</p>
+                                </div>
+                                    <form method="post" action="#">
+                                        <div class="footer-form-box">
+                   <input type="email" class="footer-form-style" placeholder="Enter email address">
+                                        </div>
+                                        <div class="footer-form-box">
+                   <input type="submit" class="footer-form-submit-style" value="SUBMIT">
+                                        </div>
+                                    </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        &copy; caffeccino.com | Designed by Ashish Jaswal and Nishant Sharma
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>    
+</html>
